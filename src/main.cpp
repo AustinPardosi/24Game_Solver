@@ -42,7 +42,7 @@ string changeData (int x) {
 }
 
 // ALGORITMA UTAMA 
-
+                    
 
 int main() {
     time_t process = time(NULL);
@@ -56,7 +56,7 @@ int main() {
     int inp;
     scanf("%d", &inp);
     while (inp != 1 && inp != 2) {
-        printf("\nMasukkan inputan dengan benar\n");
+        printf("\nMasukkan tidak sesuai\n");
         printf("Silahkan memilih kembali jenis inputan : ");
         scanf("%d", &inp);
     }
