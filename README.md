@@ -40,6 +40,7 @@
 
 ## Project Status
 * Program ini sudah selesai dikembangkan dan ditest pada beberapa kasus baik word puzzle ukuran kecil, sedang, dan besar, serta telah lulus semua test tersebut.
+
 | Poin                                                                 | Ya            | Tidak  |
 | -------------------------------------------------------------------- |:-------------:| -----: |
 | Program berhasil dikompilasi tanpa kesalahan                         | - [ ]         |        |
