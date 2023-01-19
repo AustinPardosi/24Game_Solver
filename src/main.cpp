@@ -1,51 +1,12 @@
-#include <cstdio>
-#include <cstdlib>
-#include <string>
-#include <time.h>
-#include <chrono>
-#include <cmath>
-
-using namespace std;
-using namespace std::chrono;
-
-int changeType (string x) {
-    if (x == "A") {
-        return 1;
-    } else if (x == "J") {
-        return 11;
-    } else if (x == "Q") {
-        return 12;
-    } else if (x == "K") {
-        return 13;
-    } else if (x == "10") {
-        return 10;
-    } else {
-        return (int)x[0]-48 ;
-    }
-}
-
-string changeData (int x) {
-    if (x == 1) {
-        return "A";
-    } else if (x == 11) {
-        return "J";
-    } else if (x == 12) {
-        return "Q";
-    } else if (x == 13) {
-        return "K";
-    } else if (x == 10) {
-        return "10";
-    } else {
-        string s = to_string(x);
-        return s;
-    }
-}
+#include "function.cpp"
 
 // ALGORITMA UTAMA 
-                    
+
+             
 
 int main() {
     time_t process = time(NULL);
+
     printf("Selamat Datang di Permainan Kartu 24                       ");
     printf("%s\n", ctime(&process));
     printf("Pilihan input :\n");
@@ -60,6 +21,7 @@ int main() {
         printf("Silahkan memilih kembali jenis inputan : ");
         scanf("%d", &inp);
     }
+    fstream newfile;
 
     if(inp == 1) {
         int N = 12;
@@ -81,6 +43,24 @@ int main() {
         printf("Waktu yang dibutuhkan : ");
         printf("%.2lf", duration.count());
         printf(" millisecond\n");
+        printf("\n");
+        printf("Apakah ingin menyimpan solusi? (Y/N) : ");
+
+        char opt;
+        scanf("%c", &opt);
+        // while (opt != 'Y' || opt != 'y' || opt != 'N' || opt != 'n') {
+        //     printf("\nMasukkan tidak sesuai\n");
+        //     printf("Silahkan memilih kembali apakah ingin menyimpan solusi : ");
+        //     scanf("%c", &opt);
+        // }
+        if(opt == 'Y' || opt == 'y') {
+            // newfile.open("Jawaban.txt", ios::out);
+            // if (newfile.is_open()) {
+            //     newfile
+            // }
+        } else if (opt == 'N' || opt == 'n') {
+            printf("Baik, terima kasih sudah mau bermain!\n");
+        }
 
     } else {
         printf("Ketik 4 buah angka/huruf pada kartu yang diinginkan : ");
