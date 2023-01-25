@@ -273,10 +273,11 @@ int main() {
                 break;
             } else if (opt == 'Y' || opt == 'y') {
                 string outfile;
-                outfile = "test/output.txt";
+                outfile = "D:/Vs Code/Tucil1_13521084/test/output.txt";
                 ofstream MyFile(outfile);
 
                 MyFile << "Hasil Game 24 : " << endl;
+                MyFile << "---------------------------------------" << endl;
                 for (int i = 0; i <= 3; i++) {
                     for (int j = 0; j <= 3; j++) {
                         for (int k = 0; k <= 3; k++) {
@@ -288,7 +289,6 @@ int main() {
                         }
                     }
                 }
-                MyFile << "---------------------------------------" << endl;
                 if (sum == 0) { 
                     MyFile << "Tidak Ada Solusi" << endl;
                 } else {
@@ -378,7 +378,7 @@ int main() {
                 break;
             } else if (opt == 'Y' || opt == 'y') {
                 string outfile;
-                outfile = "test/output.txt";
+                outfile = "D:/Vs Code/Tucil1_13521084/test/output.txt";;
                 ofstream MyFile(outfile);
 
                 MyFile << "Hasil Game 24 : " << endl;
