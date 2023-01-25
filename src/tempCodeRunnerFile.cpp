@@ -6,14 +6,12 @@
 #include <cmath>
 #include <fstream>
 #include <string>
-#include <set>
 
 using namespace std;
 using namespace std::chrono;
 
 // Variabel Global
 int sum = 0;
-string hasil[300];
 
 // Fungsi mengubah int menjadi string
 string changeData (int x) {
@@ -185,6 +183,8 @@ void solver (int w, int x, int y, int z) {
 }
 
 int main() {
+    string hasil[300];
+    string unik[300];
     printf("\nSelamat Datang di Permainan Kartu 24\n");
     printf("\n");
     printf(" _____ _____ _____ _____ _____ \n");
@@ -237,13 +237,13 @@ int main() {
                 }
             }
         }
-        
         printf("---------------------------------------");
         if (sum == 0) { 
             printf("\nTidak Ada Solusi\n");
         } else {
             printf("\n%d solutions\n", sum);
         }
+
         for (int i = 0; i <= 3; i++) {
             for (int j = 0; j <= 3; j++) {
                 for (int k = 0; k <= 3; k++) {
@@ -255,8 +255,6 @@ int main() {
                 }
             }
         }
-
-
         auto stop = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> durations = stop - start;
         printf("Waktu yang dibutuhkan : ");
@@ -272,11 +270,10 @@ int main() {
                 printf("\nTerima Kasih Sudah Bermain\n");
                 break;
             } else if (opt == 'Y' || opt == 'y') {
-                string outfile;
-                outfile = "test/output.txt";
-                ofstream MyFile(outfile);
+                std::ofstream outfile;
+                outfile.open("output.txt");
 
-                MyFile << "Hasil Game 24 : " << endl;
+                outfile << "Hasil Game 24 : " << endl;
                 for (int i = 0; i <= 3; i++) {
                     for (int j = 0; j <= 3; j++) {
                         for (int k = 0; k <= 3; k++) {
@@ -288,11 +285,11 @@ int main() {
                         }
                     }
                 }
-                MyFile << "---------------------------------------" << endl;
+                outfile << "---------------------------------------" << endl;
                 if (sum == 0) { 
-                    MyFile << "Tidak Ada Solusi" << endl;
+                    outfile << "Tidak Ada Solusi" << endl;
                 } else {
-                    MyFile << sum/2 << " solutions" << endl;
+                    outfile << sum/2 << " solutions" << endl;
                 }
 
                 for (int i = 0; i <= 3; i++) {
@@ -306,7 +303,7 @@ int main() {
                         }
                     }
                 }
-                MyFile.close();
+                outfile.close();
                 break;
             } else {
                 printf("\nMasukkan tidak sesuai\n");
@@ -360,8 +357,6 @@ int main() {
                 }
             }
         }
-
-
         auto stop = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> durations = stop - start;
         printf("Waktu yang dibutuhkan : ");
@@ -377,11 +372,10 @@ int main() {
                 printf("\nTerima Kasih Sudah Bermain\n");
                 break;
             } else if (opt == 'Y' || opt == 'y') {
-                string outfile;
-                outfile = "test/output.txt";
-                ofstream MyFile(outfile);
+                std::ofstream outfile;
+                outfile.open("output.txt");
 
-                MyFile << "Hasil Game 24 : " << endl;
+                outfile << "Hasil Game 24 : " << endl;
                 for (int i = 0; i <= 3; i++) {
                     for (int j = 0; j <= 3; j++) {
                         for (int k = 0; k <= 3; k++) {
@@ -393,11 +387,11 @@ int main() {
                         }
                     }
                 }
-                MyFile << "---------------------------------------" << endl;
+                outfile << "---------------------------------------" << endl;
                 if (sum == 0) { 
-                    MyFile << "Tidak Ada Solusi" << endl;
+                    outfile << "Tidak Ada Solusi" << endl;
                 } else {
-                    MyFile << sum/2 << " solutions" << endl;
+                    outfile << sum/2 << " solutions" << endl;
                 }
 
                 for (int i = 0; i <= 3; i++) {
@@ -411,7 +405,7 @@ int main() {
                         }
                     }
                 }
-                MyFile.close();
+                outfile.close();
                 break;
             } else {
                 printf("\nMasukkan tidak sesuai\n");
