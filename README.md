@@ -42,7 +42,6 @@
 * Program belum sepenuhnya dites pada environment lain dan tidak dispesifikasikan untuk dapat dijalankan di semua environment, sehingga jika ingin dilakukan tes kembali, mohon gunakan environment yang sama untuk hasil yang serupa.
 
 ## Screenshots
-*On Progress*
 ![screenshots](FIX.png)
 
 ## Project Status
